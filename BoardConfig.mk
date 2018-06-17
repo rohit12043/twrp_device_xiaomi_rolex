@@ -44,11 +44,16 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-#TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/recovery/kernel
+
+# DJ9
+ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := S88505AA1-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/riva
-
+else
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/recovery/kernel
+endif
+# end DJ9
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
