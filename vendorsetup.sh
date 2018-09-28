@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Copyright (C) 2018 OrangeFox Recovery Project
 
 add_lunch_combo omni_riva-userdebug
 add_lunch_combo omni_riva-eng
