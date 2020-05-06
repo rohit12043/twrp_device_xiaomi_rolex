@@ -87,3 +87,7 @@ TW_INCLUDE_FUSE_EXFAT := true
 
 # NTFS Support
 TW_INCLUDE_FUSE_NTFS := true
+
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+
